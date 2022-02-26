@@ -394,7 +394,7 @@
 
 
             <div class="cover-btns">
-                <a href="#articles" class="waves-effect waves-light btn">
+                <a href="#indexCard" class="waves-effect waves-light btn">
                     <i class="fa fa-angle-double-down"></i>开始阅读
                 </a>
 
@@ -532,6 +532,42 @@
                     
 
                     
+                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+<div class="video-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;每天一遍
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="dplayer" class="dplayer-video"
+                     style="height: 400px;"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/dplayer/DPlayer.min.js"></script>
+<script>
+    $(function () {
+        new DPlayer({
+            container: document.getElementById('dplayer'),
+            autoplay: 'true' === 'true',
+            theme: '#42b983',
+            loop: 'false' === 'true',
+            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
+            preload: 'auto',
+            volume: Number('0.7'),
+            video: {
+                url: 'https://v.qq.com/x/cover/mzc0020098harbk/v004241214j.html',
+                pic: '',
+                thumbnails: ''
+            }
+        });
+    });
+</script>
+
+                    
 
                     
                     <div id="recommend-sections" class="recommend">
@@ -555,28 +591,33 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/02/10/SpringBoot/">
+                    <a href="/2022/02/26/springboot2/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SpringBoot2核心技术与响应式编程">
                             
-                            <span class="card-title"></span>
+                            <span class="card-title">SpringBoot2核心技术与响应式编程</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                SpringBoot第一章  JavaConfig
-为什么要使用 Spring Boot
-因为Spring， SpringMVC 需要使用的大量的配置文件 （xml文件）
-还需要配置各种对象，把使用的对象放入到spring容器中才能使用对象
+                                springboot2核心技术-基础入门01 springboot2入门1、系统要求
+Java 8 &amp; 兼容java14 .
+
+Maven 3.3+
+
+idea 2019.1.2
+
+
+2、HelloWorld需求：浏览发送&#x2F
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-26
                             </span>
                             <span class="publish-author">
                                 
@@ -703,7 +744,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.8k</span>&nbsp;字
+                class="white-color">338</span>&nbsp;字
             
             
             
