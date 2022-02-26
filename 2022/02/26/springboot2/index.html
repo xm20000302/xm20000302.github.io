@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    924
+                    914
                 </div>
                 
 
@@ -599,44 +599,34 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot
 <h4 id="1-2、自动配置"><a href="#1-2、自动配置" class="headerlink" title="1.2、自动配置"></a>1.2、自动配置</h4><ul>
 <li><p>自动配好Tomcat</p>
 </li>
-<li><ul>
 <li><p>引入Tomcat依赖。</p>
 </li>
-<li><p>配置Tomcat</p>
-<pre><code>&lt;dependency&gt;
-      &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-      &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
-      &lt;version&gt;2.6.4.RELEASE&lt;/version&gt;
-      &lt;scope&gt;compile&lt;/scope&gt;
-    &lt;/dependency&gt;
+</ul>
+<p>配置Tomcat</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-tomcat<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.6.4.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>compile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
 </code></pre>
 <ul>
 <li><p>自动配好SpringMVC</p>
 </li>
-<li><ul>
-<li>引入SpringMVC全套组件</li>
-<li>自动配好SpringMVC常用组件（功能）</li>
-</ul>
+<li><p>引入SpringMVC全套组件</p>
+<p>自动配好SpringMVC常用组件（功能）</p>
 </li>
 <li><p>自动配好Web常见功能，如：字符编码问题</p>
 </li>
-<li><ul>
-<li>SpringBoot帮我们配置好了所有web开发的常见场景</li>
-</ul>
+<li><p>SpringBoot帮我们配置好了所有web开发的常见场景</p>
 </li>
 <li><p>默认的包结构</p>
 </li>
-<li><ul>
-<li>主程序所在包及其下面的所有子包里面的组件都会被默认扫描进来</li>
-<li>无需以前的包扫描配置</li>
-</ul>
+<li><p>主程序所在包及其下面的所有子包里面的组件都会被默认扫描进来</p>
+<p>无需以前的包扫描配置</p>
 </li>
-<li><ul>
-<li>想要改变扫描路径，@SpringBootApplication(scanBasePackages&#x3D;<strong>“com.atguigu”</strong>)</li>
-</ul>
+<li><p>想要改变扫描路径，@SpringBootApplication(scanBasePackages&#x3D;<strong>“com.atguigu”</strong>)</p>
 </li>
-<li><ul>
-<li><ul>
 <li><p>或者@ComponentScan 指定扫描路径</p>
 <pre class=" language-XML"><code class="language-XML">@SpringBootApplication
 等同于
@@ -647,29 +637,17 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot
 <ul>
 <li><p>各种配置拥有默认值</p>
 </li>
-<li><ul>
-<li>默认配置最终都是映射到某个类上，如：MultipartProperties</li>
-<li>配置文件的值最终会绑定每个类上，这个类会在容器中创建对象</li>
-</ul>
+<li><p>默认配置最终都是映射到某个类上，如：MultipartProperties</p>
+</li>
+<li><p>配置文件的值最终会绑定每个类上，这个类会在容器中创建对象</p>
 </li>
 <li><p>按需加载所有自动配置项</p>
 </li>
-<li><ul>
-<li>非常多的starter</li>
-<li>引入了哪些场景这个场景的自动配置才会开启</li>
-</ul>
+<li><p>非常多的starter</p>
 </li>
-<li><ul>
-<li>SpringBoot所有的自动配置功能都在 spring-boot-autoconfigure 包里面</li>
-</ul>
+<li><p>引入了哪些场景这个场景的自动配置才会开启</p>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<li><p>SpringBoot所有的自动配置功能都在 spring-boot-autoconfigure 包里面</p>
 </li>
 </ul>
 </li>
@@ -1174,7 +1152,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">926</span>&nbsp;字
+                class="white-color">916</span>&nbsp;字
             
             
             
