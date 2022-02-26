@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringBoot2核心技术与响应式编程, 人潮汹涌">
+    <meta name="keywords" content="人潮汹涌">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SpringBoot2核心技术与响应式编程 | 人潮汹涌</title>
+    <title>人潮汹涌</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SpringBoot2核心技术与响应式编程</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    265
+                    935
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -484,7 +484,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="springboot2核心技术-基础入门"><a href="#springboot2核心技术-基础入门" class="headerlink" title="springboot2核心技术-基础入门"></a>springboot2核心技术-基础入门</h1><h2 id="01-springboot2入门"><a href="#01-springboot2入门" class="headerlink" title="01 springboot2入门"></a>01 springboot2入门</h2><h3 id="1、系统要求"><a href="#1、系统要求" class="headerlink" title="1、系统要求"></a>1、系统要求</h3><ul>
+                <hr>
+<h2 id="title-SpringBoot2核心技术与响应式编程"><a href="#title-SpringBoot2核心技术与响应式编程" class="headerlink" title="title:SpringBoot2核心技术与响应式编程"></a>title:SpringBoot2核心技术与响应式编程</h2><h1 id="springboot2核心技术-基础入门"><a href="#springboot2核心技术-基础入门" class="headerlink" title="springboot2核心技术-基础入门"></a>springboot2核心技术-基础入门</h1><h2 id="01-、springboot2入门"><a href="#01-、springboot2入门" class="headerlink" title="01 、springboot2入门"></a>01 、springboot2入门</h2><h3 id="1、系统要求"><a href="#1、系统要求" class="headerlink" title="1、系统要求"></a>1、系统要求</h3><ul>
 <li><p><a target="_blank" rel="noopener" href="https://www.java.com/">Java 8</a> &amp; 兼容java14 .</p>
 </li>
 <li><p>Maven 3.3+</p>
@@ -544,6 +545,135 @@
 <p>注意点：</p>
 <ul>
 <li>取消掉cmd的快速编辑模式</li>
+</ul>
+<h2 id="02、了解自动配置原理"><a href="#02、了解自动配置原理" class="headerlink" title="02、了解自动配置原理"></a>02、了解自动配置原理</h2><h3 id="1、SpringBoot特点"><a href="#1、SpringBoot特点" class="headerlink" title="1、SpringBoot特点"></a>1、SpringBoot特点</h3><h4 id="1-1、依赖管理"><a href="#1-1、依赖管理" class="headerlink" title="1.1、依赖管理"></a>1.1、依赖管理</h4><ul>
+<li>父项目做依赖管理</li>
+</ul>
+<pre class=" language-xml"><code class="language-xml">依赖管理    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.6.4.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">></span></span>
+
+他的父项目
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-dependencies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.6.4.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">></span></span>
+
+几乎声明了所有开发中常用的依赖的版本号,自动版本仲裁机制
+</code></pre>
+<ul>
+<li>开发导入starter场景启动器</li>
+</ul>
+<pre class=" language-xml"><code class="language-xml">1、见到很多 spring-boot-starter-* ： *就某种场景
+2、只要引入starter，这个场景的所有常规需要的依赖我们都自动引入
+3、SpringBoot所有支持的场景
+https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-starter
+4、见到的  *-spring-boot-starter： 第三方为我们提供的简化开发的场景启动器。
+5、所有场景启动器最底层的依赖
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.6.4.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>compile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
+<ul>
+<li>无需关注版本号，自动版本仲裁</li>
+</ul>
+<p>​        </p>
+<pre class=" language-xml"><code class="language-xml">1、引入依赖默认都可以不写版本
+2、引入非版本仲裁的jar，要写版本号。
+</code></pre>
+<ul>
+<li>可以修改默认版本号</li>
+</ul>
+<pre class=" language-xml"><code class="language-xml">1、查看spring-boot-dependencies里面规定当前依赖的版本 用的 key。
+2、在当前项目里面重写配置
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mysql.version</span><span class="token punctuation">></span></span>5.1.43<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mysql.version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">></span></span>
+</code></pre>
+<h4 id="1-2、自动配置"><a href="#1-2、自动配置" class="headerlink" title="1.2、自动配置"></a>1.2、自动配置</h4><ul>
+<li><p>自动配好Tomcat</p>
+</li>
+<li><ul>
+<li><p>引入Tomcat依赖。</p>
+</li>
+<li><p>配置Tomcat</p>
+<pre><code>&lt;dependency&gt;
+      &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+      &lt;version&gt;2.6.4.RELEASE&lt;/version&gt;
+      &lt;scope&gt;compile&lt;/scope&gt;
+    &lt;/dependency&gt;
+</code></pre>
+<ul>
+<li><p>自动配好SpringMVC</p>
+</li>
+<li><ul>
+<li>引入SpringMVC全套组件</li>
+<li>自动配好SpringMVC常用组件（功能）</li>
+</ul>
+</li>
+<li><p>自动配好Web常见功能，如：字符编码问题</p>
+</li>
+<li><ul>
+<li>SpringBoot帮我们配置好了所有web开发的常见场景</li>
+</ul>
+</li>
+<li><p>默认的包结构</p>
+</li>
+<li><ul>
+<li>主程序所在包及其下面的所有子包里面的组件都会被默认扫描进来</li>
+<li>无需以前的包扫描配置</li>
+</ul>
+</li>
+<li><ul>
+<li>想要改变扫描路径，@SpringBootApplication(scanBasePackages&#x3D;<strong>“com.atguigu”</strong>)</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li><p>或者@ComponentScan 指定扫描路径</p>
+<pre class=" language-XML"><code class="language-XML">@SpringBootApplication
+等同于
+@SpringBootConfiguration
+@EnableAutoConfiguration
+@ComponentScan("com.atguigu.boot")
+</code></pre>
+<ul>
+<li><p>各种配置拥有默认值</p>
+</li>
+<li><ul>
+<li>默认配置最终都是映射到某个类上，如：MultipartProperties</li>
+<li>配置文件的值最终会绑定每个类上，这个类会在容器中创建对象</li>
+</ul>
+</li>
+<li><p>按需加载所有自动配置项</p>
+</li>
+<li><ul>
+<li>非常多的starter</li>
+<li>引入了哪些场景这个场景的自动配置才会开启</li>
+</ul>
+</li>
+<li><ul>
+<li>SpringBoot所有的自动配置功能都在 spring-boot-autoconfigure 包里面</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
                 
@@ -785,9 +915,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SpringBoot2核心技术与响应式编程">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">SpringBoot2核心技术与响应式编程</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1045,7 +1175,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">338</span>&nbsp;字
+                class="white-color">1k</span>&nbsp;字
             
             
             
