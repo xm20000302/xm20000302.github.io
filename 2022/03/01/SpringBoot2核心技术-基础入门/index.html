@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringBoot2核心技术与响应式编程, HTML,CSS,JavaScript,Java,React,Vue.js等">
+    <meta name="keywords" content="SpringBoot2核心技术与响应式编程-基础入门, HTML,CSS,JavaScript,Java,React,Vue.js等">
     <meta name="description" content="专注于Web前后端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SpringBoot2核心技术与响应式编程 | 人潮汹涌</title>
+    <title>SpringBoot2核心技术与响应式编程-基础入门 | 人潮汹涌</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SpringBoot2核心技术与响应式编程</h1>
+                    <h1 class="description center-align post-title">SpringBoot2核心技术与响应式编程-基础入门</h1>
                 </div>
             </div>
         </div>
@@ -456,28 +456,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-26
+                    2022-03-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-28
+                    2022-03-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    3.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    14 分
                 </div>
                 
 
@@ -1011,7 +1011,59 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot
 </ul>
 </li>
 </ul>
+<h3 id="4、开发小技巧"><a href="#4、开发小技巧" class="headerlink" title="4、开发小技巧"></a>4、开发小技巧</h3><h4 id="4-1、Lombok"><a href="#4-1、Lombok" class="headerlink" title="4.1、Lombok"></a>4.1、Lombok</h4><p>简化JavaBean开发</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.projectlombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>lombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
 
+
+idea中搜索安装lombok插件
+</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>简化JavaBean开发<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token annotation punctuation">@NoArgsConstructor</span>
+<span class="token comment" spellcheck="true">//@AllArgsConstructor</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@ToString</span>
+<span class="token annotation punctuation">@EqualsAndHashCode</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> Integer age<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> Pet pet<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token function">User</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span>Integer age<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+
+
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>简化日志开发<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token annotation punctuation">@Slf4j</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/hello"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">handle01</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span> String name<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        
+        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"请求进来了...."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">return</span> <span class="token string">"Hello, Spring Boot 2!"</span><span class="token operator">+</span><span class="token string">"你好："</span><span class="token operator">+</span>name<span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="4-2、dev-tools"><a href="#4-2、dev-tools" class="headerlink" title="4.2、dev-tools"></a>4.2、dev-tools</h4><pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-devtools<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optional</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optional</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>项目或者页面修改以后：Ctrl+F9；</p>
+<h4 id="4-3、Spring-Initailizr（项目初始化向导）"><a href="#4-3、Spring-Initailizr（项目初始化向导）" class="headerlink" title="4.3、Spring Initailizr（项目初始化向导）"></a>4.3、Spring Initailizr（项目初始化向导）</h4><h5 id="0、选择我们需要的开发场景"><a href="#0、选择我们需要的开发场景" class="headerlink" title="0、选择我们需要的开发场景"></a>0、选择我们需要的开发场景</h5><h5 id="1、自动依赖引入"><a href="#1、自动依赖引入" class="headerlink" title="1、自动依赖引入"></a>1、自动依赖引入</h5><h5 id="2、自动创建项目结构"><a href="#2、自动创建项目结构" class="headerlink" title="2、自动创建项目结构"></a>2、自动创建项目结构</h5><h5 id="3、自动编写好主配置类"><a href="#3、自动编写好主配置类" class="headerlink" title="3、自动编写好主配置类"></a>3、自动编写好主配置类</h5>
                 
             </div>
             <hr/>
@@ -1037,7 +1089,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/02/26/springboot2/">http://example.com/2022/02/26/springboot2/</a>
+                    <a href="http://example.com/2022/03/01/SpringBoot2%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">http://example.com/2022/03/01/SpringBoot2%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1251,13 +1303,13 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/02/26/springboot2/">
+                <a href="/2022/03/01/SpringBoot2%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SpringBoot2核心技术与响应式编程">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="SpringBoot2核心技术与响应式编程-基础入门">
                         
-                        <span class="card-title">SpringBoot2核心技术与响应式编程</span>
+                        <span class="card-title">SpringBoot2核心技术与响应式编程-基础入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1268,7 +1320,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-01
                             </span>
                         <span class="publish-author">
                             
@@ -1539,7 +1591,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3k</span>&nbsp;字
+                class="white-color">3.2k</span>&nbsp;字
             
             
             
