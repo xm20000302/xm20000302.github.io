@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CRM客户关系管理系统</title>
+      <link href="/2022/03/01/CRM%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/"/>
+      <url>/2022/03/01/CRM%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/</url>
+      
+        <content type="html"><![CDATA[<p>CRM技术架构:</p><p>视图层(View): 展示数据 跟用户交互。 html,css,js,jquery,bootstrap(ext|easyUI),jsp</p><p>控制层(Controller): 控制业务处理流程(接收请求,接收参数,封装参数,根据不同的请求调用业务层处理业务,根据处理结果相应请求)</p><p>业务层(Service):处理业务逻辑(处理业务的步骤以及操作的原子性)</p><p>​                            JAVASE(工作流:activity|JBPM)</p><p>​                            1,添加学生</p><p>​                            2,记录操作日志</p><p>持久层(Dao:Mapper):操作数据库</p><p>​                            （jdbc),mybatis,(hibernate)</p><p>整合层:维护类资源,维护数据库资源   spring(IOC,AOP)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CRM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SpringBoot2核心技术与响应式编程-核心功能</title>
       <link href="/2022/03/01/SpringBoot2%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF-%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD/"/>
       <url>/2022/03/01/SpringBoot2%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF-%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD/</url>
